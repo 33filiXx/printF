@@ -6,27 +6,30 @@
 /*   By: wel-mjiy <wel-mjiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 18:23:58 by wel-mjiy          #+#    #+#             */
-/*   Updated: 2024/11/26 18:28:58 by wel-mjiy         ###   ########.fr       */
+/*   Updated: 2024/11/29 02:50:02 by wel-mjiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
 	int	i;
+	int	count;
 
-	i = 0;
 	if (!s)
-		return ;
+		return (0);
+	i = 0;
+	count = 0;
 	while (s[i])
 	{
-		write(1, &s[i], 1);
+		count += write(1, &s[i], 1);
 		i++;
 	}
+	return (count);
 }
 
-void	ft_putchar(char c)
+int	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	return (write(1, &c, 1));
 }
