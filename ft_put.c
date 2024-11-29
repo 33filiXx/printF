@@ -6,7 +6,7 @@
 /*   By: wel-mjiy <wel-mjiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 18:23:58 by wel-mjiy          #+#    #+#             */
-/*   Updated: 2024/11/29 02:50:02 by wel-mjiy         ###   ########.fr       */
+/*   Updated: 2024/11/29 05:11:03 by wel-mjiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_putstr(char *s)
 	int	count;
 
 	if (!s)
-		return (0);
+		return (write(1, "(null)", 6));
 	i = 0;
 	count = 0;
 	while (s[i])
